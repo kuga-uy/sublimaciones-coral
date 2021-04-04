@@ -12,6 +12,7 @@ html{
 
 body{
     position: relative;
+    
 }
 //banner
 
@@ -47,7 +48,8 @@ body{
 .navbar-toggler{
     border: 1px solid $primary-font-color;  
 }
-.navbar-toggler-icon {
+
+.bx-menu {
     color: $primary-font-color;
 }
 
@@ -72,8 +74,7 @@ body{
     padding-top: 250px;
     .card{
         padding: 10px;
-        margin-right: 40px;
-        width: 17rem;
+        width: 16rem;
         .card-img-top{
             height: 320px;
         }
@@ -95,11 +96,15 @@ body{
     top: 150px;
     display: flex;
     .slick-carousel-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 350px;
-        width: 350px; 
+        width: 450px; 
         transition: all 2s ease;
         img{
          height: 300px; 
+         width: 350px;
         }
     }
     .slick-center{
@@ -149,22 +154,24 @@ body{
 .contact-section{
     position: relative;
     background-color: $secondary-color;
-    height: 200px;
+    height: 40vh;
     font-family: $tertiary-font;
     color: $secondary-font-color;
     padding: 20px;
     top: 200px;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     .form-container{
-        width: 400px;
+        width: 60%;
         .form-button{
             background-color: $primary-color;
             color:  $primary-font-color;
             border: none;
             width: 90px;
             height: 30px;
+            border-radius: 10px;
             &:hover{
                 transform: scale(1.1);
             }
@@ -175,10 +182,12 @@ body{
 //footer start
 
 #footer{
+    display: flex;
+    align-items: center;
     position: relative;
     top: 200px;
     background-color: $primary-color;
-    height: 160px;
+    height: 60vh;
     text-align: center;
     a {
         color: $tertiary-font-color;
@@ -189,4 +198,33 @@ body{
 .bxl-instagram-alt, .bxl-whatsapp, .bxl-facebook-circle{
     font-size: 3rem;
     color: $primary-font-color;
+}
+
+
+//media queries
+
+@media(max-width: 580px ) {
+    .card{
+       left: 50%;
+       transform: translateX(-50%);
+    }
+    
+}
+
+@media(max-width:450px ) {
+    .slick-arrow{
+        width: 30px;
+        height: 30px;
+        font-size: .5rem;
+        border-radius: 50%;
+    }
+
+    .slick-carousel{
+        height: 250px;
+    }
+
+    #products-section{
+        top: 90px;
+    }
+    
 }
